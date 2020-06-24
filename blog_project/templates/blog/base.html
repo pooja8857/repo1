@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%load blog_tags%}
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <title>{% block title_block%}{% endblock %}</title>
+    </head>
+<body>
+    <div class="content">
+        {% block content_block %}{% endblock %}
+    </div>
+    <div class="sidebar">
+        <h1>Durga's Blog</h1>
+        <p>Total no. of published post upto date:<span id="pcount">{%total_posts%}</span></p>
+        <h3>Latest Post:</h3>{%show_latest_post 4%}
+        <h3>Most Commented Post:</h3>
+         <ul>
+            {% for post in tags %}
+            <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

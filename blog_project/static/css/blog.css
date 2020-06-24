@@ -1,0 +1,62 @@
+
+#pcount{
+    font-size:40px;
+    color:red;
+    font-width:bold;
+}
+
+.content{
+    width: 60%;
+    padding : 0 0 0 30px;
+    background : red;
+    color : white;
+    float : left;
+    height: 100% ;
+
+}
+
+.sidebar{
+    width: 40%;
+    padding : 10px;
+    background : green;
+    color:white;
+    float : right;
+    height: 100% ;
+}
+
+body{
+    background:red  ;
+}
+
+h2{
+    text-align :center;
+    padding-bottom : 10px;
+}
+
+#date{
+    color:yellow;
+    font-size : 12px;
+    font-style : italic;
+
+}
+
+#time{
+    color:yellow;
+    font-size : 12px;
+    font-style : italic;
+
+}
+
+#pcount{
+    font-size:40px;
+    color:red;
+    font-width:bold;
+}
+
+#jh{
+    color:blue;
+    font-size : 10px;
+    font-style : italic;
+    border-bottom:2px solid yellow;
+
+}
